@@ -1,0 +1,21 @@
+package com.ajay;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.ajay.service.impl.ShipmentServiceImpl;
+
+import lombok.RequiredArgsConstructor;
+
+@SpringBootApplication
+@RequiredArgsConstructor
+public class Application {
+	private final ShipmentServiceImpl shipmentServiceImpl;
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	private void run() {
+		shipmentServiceImpl.orderPackage(1l)
+	}
+}

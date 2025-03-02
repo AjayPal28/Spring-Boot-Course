@@ -1,0 +1,55 @@
+package com.ajay.testing;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class TestingApp {
+
+	
+	@BeforeEach
+	public void beforeEach() {
+		log.info("starting the method, setting up config");
+	}
+	
+	
+	@AfterEach
+	public void afterEach() {
+		log.info("tearing down the method ");
+	}
+	
+	
+	@BeforeAll
+	public static void beforeAll() {
+		log.info("beforeAll");
+	}
+	
+	
+	@AfterAll
+	public static void afterAll() {
+		log.info("afterAll");
+	}
+	
+	@Test
+	public void name() {
+		log.info("hello");
+	}
+	
+	@Test
+	public void name1() {
+		log.info("hello 1");
+	}
+	
+	
+	public int addTwoNumber(int a,int b) {
+		return a+b;
+	}
+	
+	
+	
+}
